@@ -1,0 +1,26 @@
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 6rem;
+    font-weight: 200;
+    width: 100%;
+  }
+  
+  .intro-text{
+    z-index: 1;
+  }
+  .intro-text h2 {
+    font-weight: 300;
+    font-size: 6rem;
+  }
+  
+  .intro-text span {
+    font-weight: 900;
+    color: #000;
+  }
+  
+  .intro-image img {
+    width:105%;
+  }
+  

@@ -1,0 +1,66 @@
+@keyframes expandInput {
+  0% {
+      width: 50px; /* Start with a small width */
+      opacity: 0; /* Start invisible */
+  }
+  30% {
+      width: 50px;
+      opacity: 1; /* Become visible with the icon */
+  }
+  100% {
+      width: 100%; /* Expand to full width */
+      opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes expandButton {
+  0% {
+      transform: scale(1.5); /* Magnifying glass starts bigger */
+  }
+  100% {
+      transform: scale(1); /* Returns to normal size */
+  }
+}
+
+/* Container and positioning */
+.search-bar {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar input {
+  padding: 10px 25px;
+  width: 100%;
+  border: 2px solid #0da5d3;
+  background-color: #c0ecfaa8;
+  font-weight: 700;
+  font-size: 25px;
+  border-radius: 35px 0 0 35px;
+  outline: none;
+  height: 70px;
+  transition: width 1s ease; /* Smooth width expansion */
+  animation: expandInput 1.5s ease forwards; /* Trigger animation */
+}
+
+.search-bar button {
+  padding: 15px;
+  border: 2px solid #0da5d3; /* Same color as input border */
+  background-color: #15a1cc;
+  border-radius: 0 35px 35px 0; /* Adjusted to match the input box */
+  height: 70px; /* Same height as input box */
+  width: 70px; /* Circular appearance */
+  cursor: pointer;
+  transition: transform 0.5s ease; /* Smooth scaling */
+  animation: expandButton 1.5s ease forwards; /* Trigger button animation */
+  display: flex; /* Center the icon inside */
+  justify-content: center;
+  align-items: center;
+}
+
+.search-icon {
+  font-size: 28px;
+  color: white;
+  transition: transform 0.5s ease; /* Magnifying glass transition */
+  transform: scale(1.5); /* Initially larger icon */
+}
